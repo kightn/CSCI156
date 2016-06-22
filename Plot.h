@@ -10,36 +10,32 @@ using namespace std;
 class Plot
 {
  private:
-    int row; //row #
-    int col; //column #
+  
   public:
-   Plot( int row, int col){
-   
-   }
+   int row; //row #
+    int col; //column #
+  void setAll(int row, int col){
+  this -> row = row;
+  this -> col = col;
+  }
     
-    int getRow() {
-     return row;
+    int getRow(){
+    return row;
     }
     
     int getCol() {
     return col;
     }
     
+   Plot(){
+   
+   }
+    
+   ~Plot(){
+   
+   }
+    
 };
-
-class Grave : public Plot{
-  private:
-  char sect; 
-  public:
-    Grave(int row, int col, char sect);
-  
-  char getSect() {
-    return sect;
-    }
-    ~Grave();
-
-  };
- 
 
  
 
