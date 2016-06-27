@@ -1,7 +1,7 @@
-#ifndef VERSION1_H
-#define VERSION1_H 
+#ifndef PLOT_H
+#define PLOT_H 
 
-//commit #2
+
 
 using namespace std;
  
@@ -10,14 +10,10 @@ using namespace std;
 class Plot
 {
  private:
-       struct Graves{  // structured data
-  int row;
-  int col;
 
-  };
   public:
-   int row; //row #
-    int col; //column #
+  int row;     //encapsulation
+  int col; 
 
     
     int getRow(){
@@ -28,27 +24,32 @@ class Plot
     return col;
     }
     
-   Plot(){
+    
+   Plot(){ //constructor
    
    }
     
-   ~Plot(){
+   ~Plot(){ //destructor
    
    }
     
 };
 
- class Grave : public Plot {
+ class Grave : public Plot { //derived class
    private:
+       struct Graves{  // structured data
+  int row;
+  int col;
 
+  };
    
    public:
-     string name;
+ 
    
-   void setAll( int row, int col){
+   void setAll( int row, int col){ //overloaded method
    
      this -> row = row;
-     this-> col = col;
+     this -> col = col;
    }
  
     
